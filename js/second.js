@@ -16,4 +16,13 @@ hogy a tömb minden eleme number típusú-e vagy sem
 hogy a tömbben van-e number típusú elem vagy sem
 */
 
+const checker = (array, primitive) => {
+    return new Object({
+        exists: array.some(item => item === primitive),
+        index: array.findIndex(item => item === primitive),
+        allElementsAreNumbers: array.every(item => typeof item == number),
+        someElementsAreNumbers: array.some(item => typeof item == number),
+    });
+};
+
 
